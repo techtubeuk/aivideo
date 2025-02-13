@@ -1,1 +1,8 @@
-# requirements.txt placeholder file
+fastapi
+uvicorn
+openai
+opencv-python
+numpy
+pandas
+whisper
+python-dotenv
