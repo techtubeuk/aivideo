@@ -1,13 +1,19 @@
 {
-  "manifest_version": 2,
-  "name": "AI Video Analyser Plug-In",
+  "manifest_version": 3,
+  "name": "AI Video Analyzer",
   "version": "1.0",
-  "description": "Get instant video analysis with one click and receive email notifications.",
-  "permissions": ["activeTab", "storage", "https://*/*"],
-  "background": {"scripts": ["background.js"]},
-  "content_scripts": [{
-      "matches": ["*://*.youtube.com/*", "*://*.instagram.com/*", "*://*.twitter.com/*"],
-      "js": ["content.js"]
-  }],
-  "browser_action": {"default_popup": "options.html", "default_icon": "icon.png"}
+  "description": "Analyze video content using AI directly from your browser.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://*/*", "http://*/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
 }

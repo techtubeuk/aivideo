@@ -1,8 +1,6 @@
-fastapi
-uvicorn
-openai
-opencv-python
-numpy
-pandas
-whisper
+flask
+flask_sqlalchemy
+flask_limiter
+flask_caching
 python-dotenv
+openai
